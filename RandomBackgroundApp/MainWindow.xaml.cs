@@ -1,20 +1,15 @@
-﻿using Microsoft.WindowsAPICodePack.Dialogs;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Windows;
-using System.Windows.Threading;
+﻿using System.Windows;
 
-namespace RandomBackgroundApp
+namespace RandomBackgroundApp;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+
+
+    public MainWindow()
     {
-        
-
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-
-
+        InitializeComponent();
     }
+
+
 }

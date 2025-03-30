@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
@@ -20,9 +15,9 @@ public class GalleryViewModel : INotifyPropertyChanged
 
     private static readonly string[] ValidExtensions = { ".jpg", ".jpeg", ".png", ".bmp", ".gif" };
     ImageDto SelectedImage;
-    string SelectedFolderPath;
+    public string SelectedFolderPath;
     public ObservableCollection<ImageDto> ImageFiles { get; set; }
-    private DispatcherTimer timer;
+    private readonly DispatcherTimer timer;
     private bool isTimerRunning = false;
     public ICommand StartButtonCommand { get; }
     public ICommand OpenFolderButtonCommand { get; }
@@ -133,7 +128,7 @@ public class GalleryViewModel : INotifyPropertyChanged
         }
     }
 
-    private void SetRandomBackground()
+    public void SetRandomBackground()
     {
         try
         {

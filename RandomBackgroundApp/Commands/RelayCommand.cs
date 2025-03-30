@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace RandomBackgroundApp.Commands;
 public class RelayCommand : ICommand
